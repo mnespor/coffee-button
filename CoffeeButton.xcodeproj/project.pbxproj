@@ -14,6 +14,7 @@
 		1CE5DB471CBF0E1900A2B9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CE5DB461CBF0E1900A2B9B3 /* Assets.xcassets */; };
 		1CE5DB4A1CBF0E1900A2B9B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE5DB481CBF0E1900A2B9B3 /* LaunchScreen.storyboard */; };
 		1CE5DB531CBF0E3500A2B9B3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE5DB521CBF0E3500A2B9B3 /* HealthKit.framework */; };
+		1CF3EB851CC1F50800EE0E7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CF3EB831CC1F50800EE0E7B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		1CE5DB4B1CBF0E1900A2B9B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CE5DB511CBF0E3500A2B9B3 /* CoffeeButton.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CoffeeButton.entitlements; sourceTree = "<group>"; };
 		1CE5DB521CBF0E3500A2B9B3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1CF3EB841CC1F50800EE0E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1CE5DB481CBF0E1900A2B9B3 /* LaunchScreen.storyboard */,
 				1CE5DB4B1CBF0E1900A2B9B3 /* Info.plist */,
 				1C8873B91CC1E10B0043FC60 /* HealthManager.swift */,
+				1CF3EB831CC1F50800EE0E7B /* Localizable.strings */,
 			);
 			path = CoffeeButton;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE5DB4A1CBF0E1900A2B9B3 /* LaunchScreen.storyboard in Resources */,
+				1CF3EB851CC1F50800EE0E7B /* Localizable.strings in Resources */,
 				1CE5DB471CBF0E1900A2B9B3 /* Assets.xcassets in Resources */,
 				1CE5DB451CBF0E1900A2B9B3 /* Main.storyboard in Resources */,
 			);
@@ -173,6 +177,14 @@
 				1CE5DB491CBF0E1900A2B9B3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1CF3EB831CC1F50800EE0E7B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CF3EB841CC1F50800EE0E7B /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

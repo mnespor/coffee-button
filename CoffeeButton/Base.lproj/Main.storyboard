@@ -20,6 +20,7 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="225" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-bm-Fqp">
                                 <rect key="frame" x="14" y="617" width="347" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.56470588235294117" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CS5-va-HEd"/>
                                 </constraints>
@@ -68,10 +69,11 @@
                             <constraint firstItem="4xX-Cq-kCK" firstAttribute="baseline" secondItem="KW8-51-z3B" secondAttribute="baseline" id="UyP-yt-dd9"/>
                             <constraint firstItem="4xX-Cq-kCK" firstAttribute="leading" secondItem="KW8-51-z3B" secondAttribute="trailing" constant="-4.5" id="aUI-Tw-Lfg"/>
                             <constraint firstItem="KW8-51-z3B" firstAttribute="top" secondItem="edb-04-DXO" secondAttribute="bottom" constant="8" id="eog-BB-5fT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EHL-bm-Fqp" secondAttribute="bottom" constant="20" id="opl-c3-xr7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EHL-bm-Fqp" secondAttribute="bottom" constant="20" id="oYK-tR-j56"/>
                             <constraint firstItem="edb-04-DXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfC-Rp-m51"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="label" destination="KW8-51-z3B" id="UVY-Gu-UB9"/>

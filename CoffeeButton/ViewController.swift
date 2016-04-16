@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
     let milligramKey = "mg"
+    let sixteenOzLatte = 225
 
     var flooredSliderValue: Int {
         return Int(slider.value) - Int(slider.value % 5)
@@ -19,7 +20,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.value = Float(NSUserDefaults.standardUserDefaults().integerForKey(milligramKey))
+        slider.setThumbImage(UIImage(named: "bean"), forState: .Normal)
+        let valueFromUserDefaults = NSUserDefaults.standardUserDefaults().integerForKey(milligramKey)
+        slider.value = Float(valueFromUserDefaults > 0 ? valueFromUserDefaults : sixteenOzLatte)
         label.text = "\(flooredSliderValue)"
     }
 
@@ -29,11 +32,42 @@ class ViewController: UIViewController {
     }
 
     @IBAction func drink(sender: UIButton) {
-        HealthManager.instance.saveCaffeineSample(Double(flooredSliderValue))
+        HealthManager.instance.saveCaffeineSample(Double(flooredSliderValue)) {
+            NSOperationQueue.mainQueue().addOperationWithBlock { [weak self] in
+                self?.warn()
+            }
+        }
     }
 
-    @IBAction func undo(sender: UIButton) {
-        
+    private func warn() {
+        let alert = UIAlertController(
+            title: NSLocalizedString("main_view.cant_write.title", comment: "title"),
+            message: NSLocalizedString("main_view.cant_write.message", comment: "message"),
+            preferredStyle: .Alert
+        )
+
+        let cancel = UIAlertAction(
+            title: NSLocalizedString("main_view.cant_write.cancel", comment: "cancel"),
+            style: .Cancel,
+            handler: nil
+        )
+
+        let settings = UIAlertAction(
+            title: NSLocalizedString("main_view.cant_write.settings", comment: "settings"),
+            style: .Default) { action in
+                if let url = NSURL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+        }
+
+        alert.addAction(cancel)
+        alert.addAction(settings)
+
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
 }
 

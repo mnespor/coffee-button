@@ -14,14 +14,34 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnT-gT-Zpe">
+                                <rect key="frame" x="59.5" y="281" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="6wd-lk-9MT"/>
+                                    <constraint firstAttribute="width" constant="256" id="Ajz-WN-Z9s"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="egr-fJ-gjt"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="256" id="nSZ-i3-76Y"/>
+                                </constraints>
+                                <state key="normal" image="coffee_button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="GnT-gT-Zpe" secondAttribute="bottom" constant="130" id="Odh-zI-jmM"/>
+                            <constraint firstItem="GnT-gT-Zpe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="keM-d7-GFF"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="98" y="394"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee_button" width="256" height="256"/>
+    </resources>
 </document>

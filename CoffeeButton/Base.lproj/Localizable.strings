@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  CoffeeButton
+
+  Created by Matthew Nespor on 4/15/16.
+  Copyright © 2016 Matthew Nespor. All rights reserved.
+*/
+
+"main_view.cant_write.title" = "Can’t access Health app";
+"main_view.cant_write.message" = "Coffee Button doesn’t have permission to log caffeine usage.";
+"main_view.cant_write.cancel" = "Cancel";
+"main_view.cant_write.settings" = "Settings";
