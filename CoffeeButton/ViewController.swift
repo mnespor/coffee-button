@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
     let milligramKey = "mg"
-    let sixteenOzLatte = 225
+    let sixteenOzLatte = 220
 
     var flooredSliderValue: Int {
-        return Int(slider.value) - Int(slider.value % 5)
+        return Int(slider.value) - Int(slider.value % 10)
     }
 
     override func viewDidLoad() {
