@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW8-51-z3B">
-                                <rect key="frame" x="108" y="545" width="96" height="64"/>
+                                <rect key="frame" x="105.5" y="545" width="96" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="362-SG-gxN"/>
                                     <constraint firstAttribute="height" constant="64" id="41I-3B-XEz"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-Cq-kCK">
-                                <rect key="frame" x="204" y="545" width="68" height="64"/>
+                                <rect key="frame" x="201.5" y="545" width="68" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="BmB-dM-LDl"/>
                                     <constraint firstAttribute="width" constant="68" id="Huf-bA-a15"/>
@@ -62,7 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KW8-51-z3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-32" id="24i-3M-Sow"/>
+                            <constraint firstItem="KW8-51-z3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-34" id="24i-3M-Sow"/>
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fbb-E3-yg9"/>
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="top" secondItem="KW8-51-z3B" secondAttribute="bottom" constant="8" id="MkS-m1-wqT"/>
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Msn-aK-P2S"/>
