@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C8873BA1CC1E10B0043FC60 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8873B91CC1E10B0043FC60 /* HealthManager.swift */; };
 		1CE5DB401CBF0E1900A2B9B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5DB3F1CBF0E1900A2B9B3 /* AppDelegate.swift */; };
 		1CE5DB421CBF0E1900A2B9B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5DB411CBF0E1900A2B9B3 /* ViewController.swift */; };
 		1CE5DB451CBF0E1900A2B9B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE5DB431CBF0E1900A2B9B3 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C8873B91CC1E10B0043FC60 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
 		1CE5DB3C1CBF0E1900A2B9B3 /* CoffeeButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE5DB3F1CBF0E1900A2B9B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE5DB411CBF0E1900A2B9B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				1CE5DB461CBF0E1900A2B9B3 /* Assets.xcassets */,
 				1CE5DB481CBF0E1900A2B9B3 /* LaunchScreen.storyboard */,
 				1CE5DB4B1CBF0E1900A2B9B3 /* Info.plist */,
+				1C8873B91CC1E10B0043FC60 /* HealthManager.swift */,
 			);
 			path = CoffeeButton;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE5DB421CBF0E1900A2B9B3 /* ViewController.swift in Sources */,
+				1C8873BA1CC1E10B0043FC60 /* HealthManager.swift in Sources */,
 				1CE5DB401CBF0E1900A2B9B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				1CE5DB501CBF0E1900A2B9B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

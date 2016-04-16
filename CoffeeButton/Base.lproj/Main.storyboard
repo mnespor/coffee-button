@@ -23,6 +23,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CS5-va-HEd"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="sliderDidSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qyr-rL-s1D"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW8-51-z3B">
                                 <rect key="frame" x="139.5" y="545" width="96" height="64"/>
@@ -51,6 +54,9 @@
                                     <constraint firstAttribute="width" constant="256" id="V0a-7s-hFP"/>
                                 </constraints>
                                 <state key="normal" image="coffee_button"/>
+                                <connections>
+                                    <action selector="drink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pc6-X6-yzj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,6 +73,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="label" destination="KW8-51-z3B" id="UVY-Gu-UB9"/>
+                        <outlet property="slider" destination="EHL-bm-Fqp" id="uKU-nb-ayC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
