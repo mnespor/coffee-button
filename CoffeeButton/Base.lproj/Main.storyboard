@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoffeeButton" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="225" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-bm-Fqp">
+                                <rect key="frame" x="14" y="617" width="347" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CS5-va-HEd"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW8-51-z3B">
+                                <rect key="frame" x="139.5" y="545" width="96" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="362-SG-gxN"/>
+                                    <constraint firstAttribute="height" constant="64" id="41I-3B-XEz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-Cq-kCK">
+                                <rect key="frame" x="231" y="545" width="68" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="BmB-dM-LDl"/>
+                                    <constraint firstAttribute="width" constant="68" id="Huf-bA-a15"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edb-04-DXO">
+                                <rect key="frame" x="59" y="281" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="9HH-la-yy0"/>
+                                    <constraint firstAttribute="width" constant="256" id="V0a-7s-hFP"/>
+                                </constraints>
+                                <state key="normal" image="coffee_button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EHL-bm-Fqp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fbb-E3-yg9"/>
+                            <constraint firstItem="EHL-bm-Fqp" firstAttribute="top" secondItem="KW8-51-z3B" secondAttribute="bottom" constant="8" id="MkS-m1-wqT"/>
+                            <constraint firstItem="EHL-bm-Fqp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Msn-aK-P2S"/>
+                            <constraint firstItem="KW8-51-z3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SpT-QD-Y8k"/>
+                            <constraint firstItem="4xX-Cq-kCK" firstAttribute="baseline" secondItem="KW8-51-z3B" secondAttribute="baseline" id="UyP-yt-dd9"/>
+                            <constraint firstItem="4xX-Cq-kCK" firstAttribute="leading" secondItem="KW8-51-z3B" secondAttribute="trailing" constant="-4.5" id="aUI-Tw-Lfg"/>
+                            <constraint firstItem="KW8-51-z3B" firstAttribute="top" secondItem="edb-04-DXO" secondAttribute="bottom" constant="8" id="eog-BB-5fT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EHL-bm-Fqp" secondAttribute="bottom" constant="20" id="opl-c3-xr7"/>
+                            <constraint firstItem="edb-04-DXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfC-Rp-m51"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="294.5" y="373.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee_button" width="256" height="256"/>
+    </resources>
 </document>
