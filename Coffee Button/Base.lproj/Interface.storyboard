@@ -10,9 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Coffee_Button" customModuleProvider="target">
                     <items>
-                        <button width="80" height="80" alignment="center" backgroundImage="watch_button" id="jXO-mK-Zi0"/>
-                        <label width="136" alignment="center" text="Label" textAlignment="center" id="smP-8q-5dU"/>
-                        <slider width="1" alignment="center" continuous="YES" value="220" maximum="500" steps="50" id="nMy-na-bUr"/>
+                        <button width="120" height="120" alignment="center" backgroundImage="watch_button" id="jXO-mK-Zi0"/>
+                        <label width="1" alignment="center" text="+80mg" textAlignment="center" id="smP-8q-5dU"/>
+                        <label width="1" alignment="center" text="Today: 650mg" textAlignment="center" id="bje-46-LqI"/>
                     </items>
                 </controller>
             </objects>
