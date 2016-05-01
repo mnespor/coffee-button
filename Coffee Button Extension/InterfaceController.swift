@@ -29,12 +29,11 @@ class InterfaceController: WKInterfaceController {
         } else {
             picker.setSelectedItemIndex(21)
         }
-
-        self.updateLabel()
     }
 
     override func willActivate() {
         super.willActivate()
+        self.updateLabel()
     }
 
     override func didDeactivate() {
