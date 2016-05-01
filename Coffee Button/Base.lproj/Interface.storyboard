@@ -8,7 +8,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CoffeeButtonWatchUI" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Coffee_Button" customModuleProvider="target">
                     <items>
                         <button width="0.75" height="0.69999999999999996" alignment="center" backgroundImage="watch_button" id="jXO-mK-Zi0">
                             <connections>
@@ -20,7 +20,7 @@
                                 <action selector="pickerAction:" destination="AgC-eL-Hgc" id="njs-Lk-Mvi"/>
                             </connections>
                         </picker>
-                        <label width="1" alignment="center" text="Today: 650mg" textAlignment="center" id="bje-46-LqI"/>
+                        <label width="1" alignment="center" text="Today: 0mg" textAlignment="center" id="bje-46-LqI"/>
                     </items>
                     <connections>
                         <outlet property="label" destination="bje-46-LqI" id="V1o-7b-RJq"/>
@@ -33,7 +33,7 @@
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="CoffeeButtonWatchUI" customModuleProvider="target">
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Coffee_Button" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="gv7-I2-MZq"/>
                         <group alignment="left" id="eew-Gs-W6Y"/>

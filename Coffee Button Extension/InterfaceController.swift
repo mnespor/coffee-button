@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import HealthKit
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var picker: WKInterfacePicker!
@@ -29,6 +30,7 @@ class InterfaceController: WKInterfaceController {
             picker.setSelectedItemIndex(21)
         }
 
+        self.updateLabel()
     }
 
     override func willActivate() {
@@ -40,10 +42,33 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func buttonDidTap(sender: WKInterfaceButton) {
-        HealthManager.instance.saveCaffeineSample(Double(Prefs.dose), withCompletion: nil)
+        HealthManager
+            .instance
+            .saveCaffeineSample(Double(Prefs.dose)) { [weak self] succeeded, error in
+            guard succeeded else { return }
+            self?.updateLabel()
+        }
     }
 
     @IBAction func pickerAction(index: Int) {
         Prefs.dose = pickerValues[index]
+    }
+
+    private func updateLabel() {
+        HealthManager.instance.fetchTodaysCaffeine() { [weak self] samples in
+            guard let samples = samples else { return }
+            let amount = samples.reduce(0, combine: { (accumulator, sample) -> Double in
+                if let sample = sample as? HKQuantitySample {
+                    return accumulator + sample
+                        .quantity
+                        .doubleValueForUnit(
+                            HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Milli))
+                }
+
+                return accumulator
+            })
+
+            self?.label.setText("Today: \(Int(amount))mg")
+        }
     }
 }

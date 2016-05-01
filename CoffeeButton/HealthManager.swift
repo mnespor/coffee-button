@@ -8,6 +8,7 @@
 
 import Foundation
 import HealthKit
+import SwiftDate
 
 class HealthManager {
     static let instance = HealthManager()
@@ -45,18 +46,23 @@ class HealthManager {
         }
     }
 
-    func fetchTodaysCaffeine() {
+    func fetchTodaysCaffeine(completion: ([HKSample]?) -> Void) {
         guard HKHealthStore.isHealthDataAvailable() else { return }
-        NSDate().startOf
-        let yesterday = NSDate().dateByAddingTimeInterval(negativeDay)
-                let predicate = HKQuery.predicateForSamplesWithStartDate(yesterday,
-//                                                                 endDate: NSDate(),
-//                                                                 options: <#T##HKQueryOptions#>)
-//        let query = HKSampleQuery(
-//            sampleType: quantityType,
-//                                  predicate: HK
-//                                  limit: <#T##Int#>, sortDescriptors: <#T##[NSSortDescriptor]?#>, resultsHandler: <#T##(HKSampleQuery, [HKSample]?, NSError?) -> Void#>)
-//        store.executeQuery(<#T##query: HKQuery##HKQuery#>)
+        let now = NSDate()
+        let predicate = HKQuery.predicateForSamplesWithStartDate(
+            now.startOf(.Day),
+            endDate: now,
+            options: [.None])
+
+        let query = HKSampleQuery(
+            sampleType: quantityType,
+            predicate: predicate,
+            limit: HKObjectQueryNoLimit,
+            sortDescriptors: nil) { (query, samples, error) in
+                completion(samples)
+        }
+
+        store.executeQuery(query)
     }
 
     func saveCaffeineSample(mg: Double, withCompletion completion: ((Bool, ErrorType?) -> Void)?) {
