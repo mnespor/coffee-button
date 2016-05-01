@@ -30,18 +30,5 @@
             </objects>
             <point key="canvasLocation" x="164" y="206"/>
         </scene>
-        <!--Glance Interface Controller-->
-        <scene sceneID="rjY-Ar-IMT">
-            <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Coffee_Button" customModuleProvider="target">
-                    <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
-                    </items>
-                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
-                </glanceController>
-            </objects>
-            <point key="canvasLocation" x="164" y="514"/>
-        </scene>
     </scenes>
 </document>
