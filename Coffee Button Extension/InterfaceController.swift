@@ -54,19 +54,7 @@ class InterfaceController: WKInterfaceController {
     }
 
     private func updateLabel() {
-        HealthManager.instance.fetchTodaysCaffeine() { [weak self] samples in
-            guard let samples = samples else { return }
-            let amount = samples.reduce(0, combine: { (accumulator, sample) -> Double in
-                if let sample = sample as? HKQuantitySample {
-                    return accumulator + sample
-                        .quantity
-                        .doubleValueForUnit(
-                            HKUnit.gramUnitWithMetricPrefix(HKMetricPrefix.Milli))
-                }
-
-                return accumulator
-            })
-
+        HealthManager.instance.totalCaffeineToday() { [weak self] amount in
             self?.label.setText("Today: \(Int(amount))mg")
         }
     }

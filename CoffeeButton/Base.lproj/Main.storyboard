@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KW8-51-z3B">
-                                <rect key="frame" x="105.5" y="545" width="96" height="64"/>
+                                <rect key="frame" x="105" y="545" width="96" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="362-SG-gxN"/>
                                     <constraint firstAttribute="height" constant="64" id="41I-3B-XEz"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xX-Cq-kCK">
-                                <rect key="frame" x="201.5" y="545" width="68" height="64"/>
+                                <rect key="frame" x="201" y="545" width="68" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="BmB-dM-LDl"/>
                                     <constraint firstAttribute="width" constant="68" id="Huf-bA-a15"/>
@@ -59,6 +59,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-OR-nj8" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="28" width="343" height="245"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,17 +70,22 @@
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fbb-E3-yg9"/>
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="top" secondItem="KW8-51-z3B" secondAttribute="bottom" constant="8" id="MkS-m1-wqT"/>
                             <constraint firstItem="EHL-bm-Fqp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Msn-aK-P2S"/>
+                            <constraint firstItem="mlN-OR-nj8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N2H-aa-78h"/>
                             <constraint firstItem="4xX-Cq-kCK" firstAttribute="baseline" secondItem="KW8-51-z3B" secondAttribute="baseline" id="UyP-yt-dd9"/>
                             <constraint firstItem="4xX-Cq-kCK" firstAttribute="leading" secondItem="KW8-51-z3B" secondAttribute="trailing" id="aUI-Tw-Lfg"/>
                             <constraint firstItem="KW8-51-z3B" firstAttribute="top" secondItem="edb-04-DXO" secondAttribute="bottom" constant="8" id="eog-BB-5fT"/>
+                            <constraint firstItem="mlN-OR-nj8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fOk-Is-5oX"/>
+                            <constraint firstItem="edb-04-DXO" firstAttribute="top" secondItem="mlN-OR-nj8" secondAttribute="bottom" constant="8" id="k3v-m1-h2U"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EHL-bm-Fqp" secondAttribute="bottom" constant="20" id="oYK-tR-j56"/>
                             <constraint firstItem="edb-04-DXO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xfC-Rp-m51"/>
+                            <constraint firstItem="mlN-OR-nj8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ygN-DM-7Do"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="label" destination="KW8-51-z3B" id="UVY-Gu-UB9"/>
+                        <outlet property="lineChart" destination="mlN-OR-nj8" id="bIe-X2-4T3"/>
                         <outlet property="slider" destination="EHL-bm-Fqp" id="uKU-nb-ayC"/>
                     </connections>
                 </viewController>

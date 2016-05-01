@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Charts
+import SwiftDate
 
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var lineChart: LineChartView!
     @IBOutlet weak var slider: UISlider!
 
     var flooredSliderValue: Int {
@@ -21,6 +24,10 @@ class ViewController: UIViewController {
         slider.setThumbImage(UIImage(named: "bean"), forState: .Normal)
         slider.value = Float(Prefs.dose)
         label.text = "\(Prefs.dose)"
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        updateChart()
     }
 
     @IBAction func sliderDidSlide(sender: UISlider) {
@@ -39,7 +46,20 @@ class ViewController: UIViewController {
                 return
             }
 
-            // TODO: update chart
+            self?.updateChart()
+        }
+    }
+
+    private func configureChart() {
+
+    }
+
+    private func updateChart() {
+        let startOfHour = NSDate().startOf(.Hour)
+        let xs = (0...12).map { startOfHour + $0.hours }
+        let ys = HealthManager.instance.approxBloodstreamCaffeine(atDate: NSDate()) { [weak self]
+            // TODO: Make data
+            let data = LineChartData(xVals: xs.map { $0.toString() }, dataSets: <#T##[IChartDataSet]?#>)
         }
     }
 
