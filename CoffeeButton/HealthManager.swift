@@ -6,9 +6,8 @@
 //  Copyright © 2016 Matthew Nespor. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import HealthKit
-import SwiftDate
 
 class HealthManager {
     static let instance = HealthManager()
@@ -46,9 +45,11 @@ class HealthManager {
         }
     }
 
-    func fetchCaffeineSamples() {
-//        guard HKHealthStore.isHealthDataAvailable() else { return }
-//        let predicate = HKQuery.predicateForSamplesWithStartDate(24.hours.ago,
+    func fetchTodaysCaffeine() {
+        guard HKHealthStore.isHealthDataAvailable() else { return }
+        NSDate().startOf
+        let yesterday = NSDate().dateByAddingTimeInterval(negativeDay)
+                let predicate = HKQuery.predicateForSamplesWithStartDate(yesterday,
 //                                                                 endDate: NSDate(),
 //                                                                 options: <#T##HKQueryOptions#>)
 //        let query = HKSampleQuery(
@@ -58,14 +59,14 @@ class HealthManager {
 //        store.executeQuery(<#T##query: HKQuery##HKQuery#>)
     }
 
-    func saveCaffeineSample(mg: Double, failure: (() -> Void)?) {
+    func saveCaffeineSample(mg: Double, withCompletion completion: ((Bool, ErrorType?) -> Void)?) {
         guard HKHealthStore.isHealthDataAvailable() else { return }
         guard canWrite else {
             requestShareAuthorization { [weak self] canWrite in
                 if canWrite {
-                    self?.saveCaffeineSample(mg, failure: failure)
+                    self?.saveCaffeineSample(mg, withCompletion: completion)
                 } else {
-                    failure?()
+                    completion?(false, nil)
                 }
             }
 
@@ -80,9 +81,8 @@ class HealthManager {
             endDate: now
         )
 
-        store.saveObject(sample) { (didSucceed, error) in
-            guard let error = error else { return }
-            NSLog("%@", error.localizedDescription)
+        store.saveObject(sample) { succeeded, error in
+            completion?(succeeded, error)
         }
     }
 }

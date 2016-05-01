@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
-    let milligramKey = "mg"
-    let sixteenOzLatte = 220
 
     var flooredSliderValue: Int {
         return Int(slider.value) - Int(slider.value % 10)
@@ -21,21 +19,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.setThumbImage(UIImage(named: "bean"), forState: .Normal)
-        let valueFromUserDefaults = NSUserDefaults.standardUserDefaults().integerForKey(milligramKey)
-        slider.value = Float(valueFromUserDefaults > 0 ? valueFromUserDefaults : sixteenOzLatte)
-        label.text = "\(flooredSliderValue)"
+        slider.value = Float(Prefs.dose)
+        label.text = "\(Prefs.dose)"
     }
 
     @IBAction func sliderDidSlide(sender: UISlider) {
         label.text = "\(flooredSliderValue)"
-        NSUserDefaults.standardUserDefaults().setInteger(flooredSliderValue, forKey: milligramKey)
+        Prefs.dose = flooredSliderValue
     }
 
     @IBAction func drink(sender: UIButton) {
-        HealthManager.instance.saveCaffeineSample(Double(flooredSliderValue)) {
-            NSOperationQueue.mainQueue().addOperationWithBlock { [weak self] in
-                self?.warn()
+        HealthManager.instance.saveCaffeineSample(Double(flooredSliderValue))
+        { [weak self] succeeded, error in
+            guard succeeded else {
+                NSOperationQueue.mainQueue().addOperationWithBlock { [weak self] in
+                    self?.warn()
+                }
+
+                return
             }
+
+            // TODO: update chart
         }
     }
 

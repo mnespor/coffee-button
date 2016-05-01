@@ -9,23 +9,41 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var picker: WKInterfacePicker!
+    @IBOutlet weak var label: WKInterfaceLabel!
+
+    let pickerValues = (1...50).map { $0 * 10 }
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        // Configure interface objects here.
+        picker.setItems(pickerValues.map { val in
+            let item = WKPickerItem()
+            item.title = "+\(val)mg"
+            return item
+        })
+
+        if let index = pickerValues.indexOf(Prefs.dose) {
+            picker.setSelectedItemIndex(index)
+        } else {
+            picker.setSelectedItemIndex(21)
+        }
+
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
+    @IBAction func buttonDidTap(sender: WKInterfaceButton) {
+        HealthManager.instance.saveCaffeineSample(Double(Prefs.dose), withCompletion: nil)
+    }
+
+    @IBAction func pickerAction(index: Int) {
+        Prefs.dose = pickerValues[index]
+    }
 }

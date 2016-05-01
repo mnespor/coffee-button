@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1871B914F315FCC6D4875617 /* Pods_CoffeeButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197E0158884B6A06D44D309C /* Pods_CoffeeButton.framework */; };
+		1C8418A61CD5357100B555FB /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8873B91CC1E10B0043FC60 /* HealthManager.swift */; };
 		1C8873BA1CC1E10B0043FC60 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8873B91CC1E10B0043FC60 /* HealthManager.swift */; };
+		1CAA47A51CD54E6C00AE5B51 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CAA47A41CD54E6C00AE5B51 /* HealthKit.framework */; };
+		1CAA47A81CD5511F00AE5B51 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAA47A71CD5511F00AE5B51 /* Prefs.swift */; };
+		1CAA47A91CD5511F00AE5B51 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAA47A71CD5511F00AE5B51 /* Prefs.swift */; };
 		1CE5DB401CBF0E1900A2B9B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5DB3F1CBF0E1900A2B9B3 /* AppDelegate.swift */; };
 		1CE5DB421CBF0E1900A2B9B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE5DB411CBF0E1900A2B9B3 /* ViewController.swift */; };
 		1CE5DB451CBF0E1900A2B9B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE5DB431CBF0E1900A2B9B3 /* Main.storyboard */; };
@@ -72,6 +76,9 @@
 		0D6C8F537EF820E3671205E6 /* Pods-CoffeeButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeButton.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeButton/Pods-CoffeeButton.release.xcconfig"; sourceTree = "<group>"; };
 		197E0158884B6A06D44D309C /* Pods_CoffeeButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8873B91CC1E10B0043FC60 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		1CAA47A41CD54E6C00AE5B51 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		1CAA47A61CD54E6C00AE5B51 /* Coffee Button Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Coffee Button Extension.entitlements"; sourceTree = "<group>"; };
+		1CAA47A71CD5511F00AE5B51 /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		1CE5DB3C1CBF0E1900A2B9B3 /* CoffeeButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE5DB3F1CBF0E1900A2B9B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE5DB411CBF0E1900A2B9B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +99,10 @@
 		1CF3EB9D1CC4371800EE0E7B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		1CF3EB9F1CC4371800EE0E7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CF3EBA11CC4371800EE0E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FD10A520C1EFBF7A87AF84 /* Pods-CoffeeButtonExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeButtonExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeButtonExtension/Pods-CoffeeButtonExtension.release.xcconfig"; sourceTree = "<group>"; };
+		4C009116AC2B8DE3454405E9 /* Pods-CoffeeButtonExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeButtonExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeButtonExtension/Pods-CoffeeButtonExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CFC1983CB19906CC3BD6F2F8 /* Pods-CoffeeButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeButton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeButton/Pods-CoffeeButton.debug.xcconfig"; sourceTree = "<group>"; };
+		E783591FD51E51F6EA930C12 /* Pods_CoffeeButtonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeButtonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CAA47A51CD54E6C00AE5B51 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +160,7 @@
 				1CE5DB4B1CBF0E1900A2B9B3 /* Info.plist */,
 				1C8873B91CC1E10B0043FC60 /* HealthManager.swift */,
 				1CF3EB831CC1F50800EE0E7B /* Localizable.strings */,
+				1CAA47A71CD5511F00AE5B51 /* Prefs.swift */,
 			);
 			path = CoffeeButton;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 		1CF3EB981CC4371700EE0E7B /* Coffee Button Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1CAA47A61CD54E6C00AE5B51 /* Coffee Button Extension.entitlements */,
 				1CF3EB991CC4371800EE0E7B /* InterfaceController.swift */,
 				1CF3EB9B1CC4371800EE0E7B /* ExtensionDelegate.swift */,
 				1CF3EB9D1CC4371800EE0E7B /* GlanceController.swift */,
@@ -178,8 +191,10 @@
 		397B9D84A73E1959930899E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CAA47A41CD54E6C00AE5B51 /* HealthKit.framework */,
 				1CE5DB521CBF0E3500A2B9B3 /* HealthKit.framework */,
 				197E0158884B6A06D44D309C /* Pods_CoffeeButton.framework */,
+				E783591FD51E51F6EA930C12 /* Pods_CoffeeButtonExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +204,8 @@
 			children = (
 				CFC1983CB19906CC3BD6F2F8 /* Pods-CoffeeButton.debug.xcconfig */,
 				0D6C8F537EF820E3671205E6 /* Pods-CoffeeButton.release.xcconfig */,
+				4C009116AC2B8DE3454405E9 /* Pods-CoffeeButtonExtension.debug.xcconfig */,
+				38FD10A520C1EFBF7A87AF84 /* Pods-CoffeeButtonExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -277,6 +294,12 @@
 					};
 					1CF3EB931CC4371700EE0E7B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HE547YGUS5;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -386,6 +409,7 @@
 			files = (
 				1CE5DB421CBF0E1900A2B9B3 /* ViewController.swift in Sources */,
 				1C8873BA1CC1E10B0043FC60 /* HealthManager.swift in Sources */,
+				1CAA47A81CD5511F00AE5B51 /* Prefs.swift in Sources */,
 				1CE5DB401CBF0E1900A2B9B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +420,9 @@
 			files = (
 				1CF3EB9C1CC4371800EE0E7B /* ExtensionDelegate.swift in Sources */,
 				1CF3EB9A1CC4371800EE0E7B /* InterfaceController.swift in Sources */,
+				1CAA47A91CD5511F00AE5B51 /* Prefs.swift in Sources */,
 				1CF3EB9E1CC4371800EE0E7B /* GlanceController.swift in Sources */,
+				1C8418A61CD5357100B555FB /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +621,7 @@
 		1CF3EBA71CC4371800EE0E7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Coffee Button Extension/Coffee Button Extension.entitlements";
 				INFOPLIST_FILE = "Coffee Button Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mnespor.CoffeeButton.watchkitapp.watchkitextension;
@@ -609,6 +636,7 @@
 		1CF3EBA81CC4371800EE0E7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Coffee Button Extension/Coffee Button Extension.entitlements";
 				INFOPLIST_FILE = "Coffee Button Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mnespor.CoffeeButton.watchkitapp.watchkitextension;
@@ -648,6 +676,7 @@
 				1CF3EBA81CC4371800EE0E7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CF3EBAB1CC4371800EE0E7B /* Build configuration list for PBXNativeTarget "Coffee Button" */ = {
 			isa = XCConfigurationList;
@@ -656,6 +685,7 @@
 				1CF3EBA61CC4371800EE0E7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
