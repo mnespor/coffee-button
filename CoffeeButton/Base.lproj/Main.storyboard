@@ -91,6 +91,7 @@
                     <connections>
                         <outlet property="label" destination="KW8-51-z3B" id="UVY-Gu-UB9"/>
                         <outlet property="slider" destination="EHL-bm-Fqp" id="uKU-nb-ayC"/>
+                        <outlet property="todayLabel" destination="PXm-vK-g3j" id="he8-0D-EbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -11,7 +11,7 @@ import SwiftDate
 
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var lineChart: LineChartView!
+    @IBOutlet weak var todayLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
 
     var flooredSliderValue: Int {
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
-        updateChart()
+        updateLabel()
     }
 
     @IBAction func sliderDidSlide(sender: UISlider) {
@@ -50,7 +50,19 @@ class ViewController: UIViewController {
     }
 
     private func updateLabel() {
+        HealthManager.instance.totalCaffeineToday { [weak self] amount in
+            NSOperationQueue.mainQueue().addOperationWithBlock {
+                if let sself = self {
+                    UIView.transitionWithView(
+                        sself.todayLabel,
+                        duration: 0.25,
+                        options: .TransitionCrossDissolve,
+                        animations: { sself.todayLabel.text = "Today: \(Int(amount))mg" },
+                        completion: nil)
 
+                }
+            }
+        }
     }
 
 //    private func configureChart() {
